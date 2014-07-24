@@ -1,5 +1,9 @@
 from flask import Flask
+<<<<<<< HEAD
 from flask import render_template
+=======
+from flask import send_file
+>>>>>>> 2fb96b3b302332add0878ec24fef9248548c23fc
 app = Flask(__name__)
 
 @app.route('/user/<username>')
@@ -13,6 +17,7 @@ def show_post(post_id):
     return 'Post {}'.format(post_id)
 
 @app.route('/')
+<<<<<<< HEAD
 def index():
     return 'Index Page'
 
@@ -30,6 +35,24 @@ def about():
     return 'The about page'
 
 
+=======
+def show_root():
+	#show the root
+	return 'Welcome To the Root!'
+
+@app.route('/test/')
+def show_test_page():
+	#show the test page
+	return '<a href="http://www.aftonbladet.se" target="_blank">aftonbladet</a>'
+
+@app.route('/get_image')
+def get_image():
+    if request.args.get('type') == '1':
+       filename = 'ok.jpg'
+    else:
+       filename = 'error.jpg'
+    return send_file(filename, mimetype='image/gif')
+>>>>>>> 2fb96b3b302332add0878ec24fef9248548c23fc
 
 if __name__ == '__main__':
 	app.run()
