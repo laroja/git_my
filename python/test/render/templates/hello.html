@@ -1,0 +1,17 @@
+<!doctype html>
+<title>Hello from Flask</title>
+<head>
+
+<!-- <link rel="StyleSheet" type="text/css" href="mystyle.css"></link> -->
+<style type="text/css">
+	h1 {
+		color: purple;
+		font-size: 32px;
+	}
+</style>
+</head>
+{% if name %}
+  <h1>Hello {{ name }}!</h1>
+{% else %}
+  <h1> Hello World!</h1>
+{% endif %}
