@@ -1,0 +1,2 @@
+def skycake():
+  print("Success")
