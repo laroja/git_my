@@ -1,2 +1,2 @@
-second_name,status,points_per_game
-Szczesny,a,2.0
+status,goals_scored,value_form,team,event_points,yellow_cards,transfers_in,ea_index,id,selected_by_percent,team_name,transfers_in_event,event_total,selected_by,bps,team_code,clean_sheets,event_explain,penalties_missed,cost_change_start_fall,value_season,team_id,second_name,minutes,code,assists,dreamteam_count,cost_change_start,web_name,element_type,goals_conceded,first_name,transfers_out_event,ep_next,points_per_game,saves,cost_change_event,transfers_out,type_name,red_cards,now_cost,own_goals,cost_change_event_fall,penalties_saved,total_points,form,ep_this,bonus
+a,0,0.4,1,2,0,2340,13,1,12.8,Arsenal,2340,2,12.8,7,3,0,"[['Minutes played', 90, 2]]",0,0,0.4,1,Szczesny,90,59936,0,0,0,Szczesny,1,1,Wojciech,4719,3.1,2.0,1,0,4719,Goalkeeper,0,55,0,0,0,2,2.0,3.1,0
