@@ -65,5 +65,4 @@ if __name__ == ('__main__'):
         player_dict = get_playerDict(player_dict, jdata, pkeys_list)
         #For player, write values to .csv file
         prnt_csvPlayer(csvfile, 'a', player_dict)
-        print("player"+str(id))
     
