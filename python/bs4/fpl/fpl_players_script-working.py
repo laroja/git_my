@@ -10,6 +10,7 @@ def get_playerRequest(web_name, id):
 
 #return a json object
 def get_jsonObject(res):
+    global jdata
     try:
         jdata = json.loads(res.text)
     except ValueError:
@@ -18,7 +19,7 @@ def get_jsonObject(res):
 
 #lista över nycklar 
 def get_playerKeys():
-    keys_list = ['assists', 'bonus', 'bps', 'clean_sheets', 'code', 'cost_change_event', 'cost_change_event_fall', 'cost_change_start', 'cost_change_start_fall', 'dreamteam_count', 'ea_index', 'element_type', 'ep_next', 'ep_this', 'event_explain', 'event_points', 'event_total', 'first_name', 'form', 'goals_conceded', 'goals_scored', 'id', 'minutes', 'now_cost', 'own_goals', 'penalties_missed', 'penalties_saved', 'points_per_game', 'red_cards', 'saves', 'second_name', 'selected_by', 'selected_by_percent', 'status', 'team', 'team_code', 'team_id', 'team_name', 'total_points', 'transfers_in', 'transfers_in_event', 'transfers_out', 'transfers_out_event', 'type_name', 'value_form', 'value_season', 'web_name', 'yellow_cards']
+    keys_list = [ 'team', 'first_name', 'second_name', 'total_points', 'minutes',  'assists', 'bonus', 'bps', 'clean_sheets', 'points_per_game', 'selected_by_percent', 'goals_conceded', 'goals_scored', 'cost_change_event', 'cost_change_event_fall', 'cost_change_start', 'cost_change_start_fall', 'status', 'ep_this', 'event_explain', 'event_points', 'event_total', 'form', 'dreamteam_count', 'ea_index', 'element_type', 'ep_next', 'id', 'own_goals', 'penalties_missed', 'penalties_saved', 'yellow_cards', 'red_cards', 'saves', 'selected_by', 'now_cost', 'transfers_in', 'transfers_in_event', 'transfers_out', 'transfers_out_event', 'type_name', 'value_form', 'value_season', 'web_name', 'code', 'team_code', 'team_id', 'team_name']
     return keys_list
 
 def prnt_csvHeader(csvfile, mode, pkeys_list):
@@ -65,4 +66,5 @@ if __name__ == ('__main__'):
         player_dict = get_playerDict(player_dict, jdata, pkeys_list)
         #For player, write values to .csv file
         prnt_csvPlayer(csvfile, 'a', player_dict)
+        print("player"+str(id))
     
